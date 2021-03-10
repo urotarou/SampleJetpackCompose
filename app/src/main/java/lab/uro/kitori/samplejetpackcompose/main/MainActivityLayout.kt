@@ -31,7 +31,8 @@ fun PreviewLayoutDark() {
 fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
     sampleViewModelButtonOnClick: () -> Unit = {},
-    sampleImageButtonOnClick: () -> Unit = {}
+    sampleImageButtonOnClick: () -> Unit = {},
+    sampleListButtonOnClick: () -> Unit = {}
 ) {
     RootScreenLayout(darkTheme, "Main") {
         Column(
@@ -52,6 +53,14 @@ fun ScreenLayout(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("Sample Image")
+            }
+            Spacer(modifier = Modifier.height(32.dp))
+
+            Button(
+                onClick = sampleListButtonOnClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample List")
             }
         }
     }

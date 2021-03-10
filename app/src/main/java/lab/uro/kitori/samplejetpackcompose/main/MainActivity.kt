@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import lab.uro.kitori.samplejetpackcompose.sampleimage.SampleImageActivity
+import lab.uro.kitori.samplejetpackcompose.samplelist.SampleListActivity
 import lab.uro.kitori.samplejetpackcompose.sampleviewmodel.SampleViewModelActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,9 @@ class MainActivity : AppCompatActivity() {
                 },
                 sampleImageButtonOnClick = {
                     startActivity(SampleImageActivity.createIntent(this))
+                },
+                sampleListButtonOnClick = {
+                    startActivity(SampleListActivity.createIntent(this))
                 }
             )
         }

@@ -22,5 +22,6 @@
         </activity>
         <activity android:name=".sampleviewmodel.SampleViewModelActivity" />
         <activity android:name=".sampleimage.SampleImageActivity" />
+        <activity android:name=".samplelist.SampleListActivity" />
     </application>
 </manifest>
