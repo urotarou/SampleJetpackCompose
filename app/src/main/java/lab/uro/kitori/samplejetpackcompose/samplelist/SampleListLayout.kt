@@ -46,11 +46,7 @@ fun PreviewLayoutLightInProgress() {
 fun PreviewLayoutDark() {
     ScreenLayout(
         true,
-        items = listOf(
-            "111",
-            "222",
-            "333"
-        )
+        items = (0 until 50).map { "$it" }
     )
 }
 
@@ -100,7 +96,7 @@ fun ScreenLayout(
                 ) {
                     itemsIndexed(items) { index, item ->
                         ListItem(item)
-                        if (index < items.size) {
+                        if (index != items.lastIndex) {
                             Spacer(modifier = Modifier.height(8.dp))
                         }
                     }
