@@ -19,14 +19,11 @@ import androidx.compose.material.Card
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreenLayout
 
 @Preview
@@ -37,20 +34,34 @@ fun PreviewLayoutLight() {
 
 @Preview
 @Composable
+fun PreviewLayoutLightInProgress() {
+    ScreenLayout(
+        false,
+        isLoading = true
+    )
+}
+
+@Preview
+@Composable
 fun PreviewLayoutDark() {
-    ScreenLayout(true)
+    ScreenLayout(
+        true,
+        items = listOf(
+            "111",
+            "222",
+            "333"
+        )
+    )
 }
 
 @Composable
 fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    viewModel: SampleListViewModel = viewModel(),
     backIconOnClick: () -> Unit = {},
-    loadButtonOnClick: () -> Unit = {}
+    loadButtonOnClick: () -> Unit = {},
+    items: List<String> = listOf(),
+    isLoading: Boolean = false
 ) {
-    val items by viewModel.items.observeAsState(listOf())
-    val isLoading by viewModel.isLoading.observeAsState(false)
-
     BranchScreenLayout(
         darkTheme,
         "Sample List",

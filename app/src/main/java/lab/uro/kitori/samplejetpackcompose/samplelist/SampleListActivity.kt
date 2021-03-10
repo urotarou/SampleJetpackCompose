@@ -6,6 +6,8 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 
 class SampleListActivity : AppCompatActivity() {
     companion object {
@@ -17,14 +19,18 @@ class SampleListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            val items by viewModel.items.observeAsState(listOf())
+            val isLoading by viewModel.isLoading.observeAsState(false)
+
             ScreenLayout(
-                viewModel = viewModel,
                 backIconOnClick = {
                     onBackPressed()
                 },
                 loadButtonOnClick = {
                     viewModel.load()
-                }
+                },
+                items = items,
+                isLoading = isLoading
             )
         }
     }

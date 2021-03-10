@@ -9,35 +9,45 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreenLayout
 
 @Preview
 @Composable
+fun PreviewLayoutLightNoName() {
+    ScreenLayout(
+        false,
+        name = ""
+    )
+}
+
+@Preview
+@Composable
 fun PreviewLayoutLight() {
-    ScreenLayout(false)
+    ScreenLayout(
+        false,
+        name = "light"
+    )
 }
 
 @Preview
 @Composable
 fun PreviewLayoutDark() {
-    ScreenLayout(true)
+    ScreenLayout(
+        true,
+        name = "dark"
+    )
 }
 
 @Composable
 fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    viewModel: SampleViewModelViewModel = viewModel(),
     backIconOnClick: () -> Unit = {},
-    shuffleButtonOnClick: () -> Unit = {}
+    shuffleButtonOnClick: () -> Unit = {},
+    name: String = ""
 ) {
-    val name by viewModel.name.observeAsState("")
-
     BranchScreenLayout(
         darkTheme,
         "Sample ViewModel",

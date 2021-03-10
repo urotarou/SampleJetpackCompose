@@ -6,6 +6,8 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 
 class SampleViewModelActivity : AppCompatActivity() {
     companion object {
@@ -17,14 +19,16 @@ class SampleViewModelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            val name by viewModel.name.observeAsState("")
+
             ScreenLayout(
-                viewModel = viewModel,
                 backIconOnClick = {
                     onBackPressed()
                 },
                 shuffleButtonOnClick = {
                     viewModel.nextName()
-                }
+                },
+                name = name
             )
         }
     }
