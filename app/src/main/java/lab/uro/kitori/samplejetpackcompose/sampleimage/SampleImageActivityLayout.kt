@@ -52,7 +52,7 @@ fun ScreenLayout(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Main") },
+                    title = { Text("Sample Image") },
                     elevation = 4.dp,
                     navigationIcon = {
                         IconButton(onClick = backIconOnClick) {
