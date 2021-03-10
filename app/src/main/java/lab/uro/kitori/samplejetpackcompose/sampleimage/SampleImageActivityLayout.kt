@@ -11,14 +11,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,7 +23,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import lab.uro.kitori.samplejetpackcompose.R
-import lab.uro.kitori.samplejetpackcompose.compose.theme.AppTheme
+import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreenLayout
 
 @Preview
 @Composable
@@ -48,58 +42,48 @@ fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
-    AppTheme(darkTheme) {
-        Scaffold(
-            topBar = {
-                TopAppBar(
-                    title = { Text("Sample Image") },
-                    elevation = 4.dp,
-                    navigationIcon = {
-                        IconButton(onClick = backIconOnClick) {
-                            Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "back")
-                        }
-                    }
-                )
-            }
+    BranchScreenLayout(
+        darkTheme,
+        "Sample Image",
+        backIconOnClick
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp, 32.dp)
         ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(16.dp, 32.dp)
+            Box(
+                contentAlignment = Alignment.Center
             ) {
-                Box(
-                    contentAlignment = Alignment.Center
-                ) {
-                    Image(
-                        painterResource(R.drawable.ic_launcher_background),
-                        "sample-background",
-                        modifier = Modifier
-                            .height(150.dp)
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(16.dp)),
-                        contentScale = ContentScale.Crop
-                    )
-                    Image(
-                        painterResource(R.drawable.ic_launcher_foreground),
-                        "sample-foreground",
-                        modifier = Modifier.wrapContentSize()
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(16.dp))
-
-                Text(
-                    "hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge",
-                    style = MaterialTheme.typography.h6,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
+                Image(
+                    painterResource(R.drawable.ic_launcher_background),
+                    "sample-background",
+                    modifier = Modifier
+                        .height(150.dp)
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(16.dp)),
+                    contentScale = ContentScale.Crop
                 )
-                Text("piyopiyo")
-                Text(
-                    "fugafugafuga",
-                    style = MaterialTheme.typography.overline
+                Image(
+                    painterResource(R.drawable.ic_launcher_foreground),
+                    "sample-foreground",
+                    modifier = Modifier.wrapContentSize()
                 )
             }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text(
+                "hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge",
+                style = MaterialTheme.typography.h6,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
+            )
+            Text("piyopiyo")
+            Text(
+                "fugafugafuga",
+                style = MaterialTheme.typography.overline
+            )
         }
     }
 }
