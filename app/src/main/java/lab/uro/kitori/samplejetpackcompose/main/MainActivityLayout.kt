@@ -4,7 +4,6 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
@@ -46,10 +45,7 @@ fun ScreenLayout(
                 Button(
                     onClick = sampleImageButtonOnClick
                 ) {
-                    Text(
-                        "Sample Image",
-                        style = MaterialTheme.typography.body2
-                    )
+                    Text("Sample Image")
                 }
             }
         }

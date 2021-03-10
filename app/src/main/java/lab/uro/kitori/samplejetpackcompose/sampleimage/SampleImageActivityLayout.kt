@@ -23,7 +23,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -88,22 +87,14 @@ fun ScreenLayout(
 
                 Text(
                     "hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge",
-                    modifier = Modifier.layoutId("hoge_text"),
                     style = MaterialTheme.typography.h6,
                     maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                    color = MaterialTheme.colors.onPrimary
+                    overflow = TextOverflow.Ellipsis
                 )
-                Text(
-                    "piyopiyo",
-                    modifier = Modifier.layoutId("piyo_text"),
-                    style = MaterialTheme.typography.body2,
-                    color = MaterialTheme.colors.onPrimary
-                )
+                Text("piyopiyo")
                 Text(
                     "fugafugafuga",
-                    style = MaterialTheme.typography.overline,
-                    color = MaterialTheme.colors.onPrimary
+                    style = MaterialTheme.typography.overline
                 )
             }
         }
