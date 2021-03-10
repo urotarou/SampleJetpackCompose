@@ -1,4 +1,4 @@
-package lab.uro.kitori.samplejetpackcompose.image
+package lab.uro.kitori.samplejetpackcompose.sampleimage
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
