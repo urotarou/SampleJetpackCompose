@@ -1,7 +1,9 @@
 package lab.uro.kitori.samplejetpackcompose.sampleviewmodel
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
@@ -40,7 +42,7 @@ fun ScreenLayout(
     backIconOnClick: () -> Unit = {},
     shuffleButtonOnClick: () -> Unit = {}
 ) {
-    val name: String by viewModel.name.observeAsState("")
+    val name by viewModel.name.observeAsState("")
 
     AppTheme(darkTheme) {
         Scaffold(
@@ -56,10 +58,19 @@ fun ScreenLayout(
                 )
             }
         ) {
+            val nameVisibility = name.isNotBlank()
+
             Column(
-                modifier = Modifier.padding(16.dp)
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp, 32.dp),
+                verticalArrangement = if (nameVisibility) {
+                    Arrangement.SpaceBetween
+                } else {
+                    Arrangement.Bottom
+                }
             ) {
-                if (name.isNotBlank()) {
+                if (nameVisibility) {
                     Text("name is $name")
                 }
 

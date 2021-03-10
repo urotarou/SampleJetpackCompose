@@ -3,6 +3,7 @@ package lab.uro.kitori.samplejetpackcompose.main
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
@@ -43,7 +44,9 @@ fun ScreenLayout(
             }
         ) {
             Column(
-                modifier = Modifier.padding(16.dp, 32.dp)
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(16.dp, 32.dp)
             ) {
                 Button(
                     onClick = sampleViewModelButtonOnClick
