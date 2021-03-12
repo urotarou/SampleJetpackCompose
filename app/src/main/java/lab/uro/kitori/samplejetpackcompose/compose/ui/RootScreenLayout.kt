@@ -19,8 +19,10 @@ import androidx.compose.material.icons.filled.BrokenImage
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.ImageSearch
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
@@ -69,12 +71,12 @@ fun RootScreenLayout(
             },
             bottomBar = {
                 BottomAppBar {
-                    val selectedIndex = rememberSaveable { mutableStateOf(0) }
+                    var selectedIndex by rememberSaveable { mutableStateOf(0) }
 
                     BottomNavigationItem(
-                        selected = selectedIndex.value == 0,
+                        selected = selectedIndex == 0,
                         onClick = {
-                            selectedIndex.value = 0
+                            selectedIndex = 0
                             Toast.makeText(context, "click call", Toast.LENGTH_SHORT).show()
                         },
                         icon = {
@@ -83,9 +85,9 @@ fun RootScreenLayout(
                         label = { Text("call") }
                     )
                     BottomNavigationItem(
-                        selected = selectedIndex.value == 1,
+                        selected = selectedIndex == 1,
                         onClick = {
-                            selectedIndex.value = 1
+                            selectedIndex = 1
                             Toast.makeText(context, "click link", Toast.LENGTH_SHORT).show()
                         },
                         icon = {
@@ -94,9 +96,9 @@ fun RootScreenLayout(
                         label = { Text("link") }
                     )
                     BottomNavigationItem(
-                        selected = selectedIndex.value == 2,
+                        selected = selectedIndex == 2,
                         onClick = {
-                            selectedIndex.value = 2
+                            selectedIndex = 2
                             Toast.makeText(context, "click comment", Toast.LENGTH_SHORT).show()
                         },
                         icon = {
