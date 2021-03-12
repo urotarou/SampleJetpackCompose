@@ -5,7 +5,7 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.BottomAppBar
+import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
@@ -70,7 +70,7 @@ fun RootScreenLayout(
                 )
             },
             bottomBar = {
-                BottomAppBar {
+                BottomNavigation {
                     var selectedIndex by rememberSaveable { mutableStateOf(0) }
 
                     BottomNavigationItem(
