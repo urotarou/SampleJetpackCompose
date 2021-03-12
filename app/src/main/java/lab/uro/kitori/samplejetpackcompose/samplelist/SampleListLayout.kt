@@ -1,6 +1,7 @@
 package lab.uro.kitori.samplejetpackcompose.samplelist
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -12,7 +13,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.Card
@@ -92,13 +94,22 @@ fun ScreenLayout(
             else -> {
                 LazyColumn(
                     modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(16.dp)
+                    contentPadding = PaddingValues(0.dp, 16.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    itemsIndexed(items) { index, item ->
-                        ListItem(item)
-                        if (index != items.lastIndex) {
-                            Spacer(modifier = Modifier.height(8.dp))
+                    item {
+                        LazyRow(
+                            contentPadding = PaddingValues(16.dp, 0.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            items(items) {
+                                ListItem(text = it)
+                            }
                         }
+                    }
+
+                    items(items) {
+                        ListItem(text = it, padding = PaddingValues(16.dp, 0.dp))
                     }
                 }
             }
@@ -107,12 +118,13 @@ fun ScreenLayout(
 }
 
 @Composable
-fun ListItem(text: String) {
+fun ListItem(text: String, padding: PaddingValues = PaddingValues(0.dp)) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .height(48.dp)
             .clip(RoundedCornerShape(8.dp))
+            .padding(padding)
     ) {
         Row(
             modifier = Modifier
