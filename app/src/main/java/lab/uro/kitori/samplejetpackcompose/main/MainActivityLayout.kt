@@ -34,7 +34,8 @@ fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
     sampleViewModelButtonOnClick: () -> Unit = {},
     sampleImageButtonOnClick: () -> Unit = {},
-    sampleListButtonOnClick: () -> Unit = {}
+    sampleListButtonOnClick: () -> Unit = {},
+    sampleNavigationButtonOnClick: () -> Unit = {}
 ) {
     RootScreenLayout(darkTheme, "Main") {
         val scrollState = rememberScrollState()
@@ -66,6 +67,14 @@ fun ScreenLayout(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("Sample List")
+            }
+            Spacer(modifier = Modifier.height(32.dp))
+
+            Button(
+                onClick = sampleNavigationButtonOnClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample Navigation")
             }
         }
     }

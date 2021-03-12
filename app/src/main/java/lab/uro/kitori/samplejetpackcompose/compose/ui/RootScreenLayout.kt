@@ -2,28 +2,15 @@ package lab.uro.kitori.samplejetpackcompose.compose.ui
 
 import android.widget.Toast
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddComment
-import androidx.compose.material.icons.filled.AddLink
 import androidx.compose.material.icons.filled.BrokenImage
-import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.ImageSearch
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import lab.uro.kitori.samplejetpackcompose.compose.theme.AppTheme
@@ -69,57 +56,7 @@ fun RootScreenLayout(
                     }
                 )
             },
-            bottomBar = {
-                BottomNavigation {
-                    var selectedIndex by rememberSaveable { mutableStateOf(0) }
-
-                    BottomNavigationItem(
-                        selected = selectedIndex == 0,
-                        onClick = {
-                            selectedIndex = 0
-                            Toast.makeText(context, "click call", Toast.LENGTH_SHORT).show()
-                        },
-                        icon = {
-                            Icon(imageVector = Icons.Default.Call, contentDescription = "func")
-                        },
-                        label = { Text("call") }
-                    )
-                    BottomNavigationItem(
-                        selected = selectedIndex == 1,
-                        onClick = {
-                            selectedIndex = 1
-                            Toast.makeText(context, "click link", Toast.LENGTH_SHORT).show()
-                        },
-                        icon = {
-                            Icon(imageVector = Icons.Default.AddLink, contentDescription = "func")
-                        },
-                        label = { Text("link") }
-                    )
-                    BottomNavigationItem(
-                        selected = selectedIndex == 2,
-                        onClick = {
-                            selectedIndex = 2
-                            Toast.makeText(context, "click comment", Toast.LENGTH_SHORT).show()
-                        },
-                        icon = {
-                            Icon(
-                                imageVector = Icons.Default.AddComment,
-                                contentDescription = "func"
-                            )
-                        },
-                        label = { Text("comment") }
-                    )
-                }
-            },
-            content = {
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(bottom = it.calculateBottomPadding())
-                ) {
-                    content()
-                }
-            }
+            content = { content() }
         )
     }
 }
