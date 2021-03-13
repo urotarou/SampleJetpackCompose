@@ -35,7 +35,8 @@ fun ScreenLayout(
         darkTheme,
         "Sample Navigation",
         navController,
-        backIconOnClick
+        backIconOnClick,
+        Screen.values().toList()
     ) {
         NavHost(navController = navController, startDestination = Screen.HOME.route) {
             composable(Screen.HOME.route) { HomeLayout(navController) }

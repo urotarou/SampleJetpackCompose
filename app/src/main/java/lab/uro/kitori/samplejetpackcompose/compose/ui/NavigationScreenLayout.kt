@@ -29,7 +29,8 @@ import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.Screen
 @Composable
 fun PreviewNavigationScreenLayout() {
     NavigationScreenLayout(
-        title = "navigation"
+        title = "navigation",
+        screen = Screen.values().toList()
     )
 }
 
@@ -39,6 +40,7 @@ fun NavigationScreenLayout(
     title: String = "",
     navController: NavHostController = rememberNavController(),
     backIconOnClick: () -> Unit = {},
+    screen: List<Screen> = listOf(),
     content: @Composable () -> Unit = {}
 ) {
     AppTheme(darkTheme) {
@@ -58,7 +60,7 @@ fun NavigationScreenLayout(
                     val navBackStackEntry by navController.currentBackStackEntryAsState()
                     val currentRoute = navBackStackEntry?.arguments?.getString(KEY_ROUTE)
 
-                    Screen.values().forEach {
+                    screen.forEach {
                         BottomNavigationItem(
                             selected = currentRoute == it.route,
                             onClick = {
