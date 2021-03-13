@@ -14,14 +14,14 @@ import lab.uro.kitori.samplejetpackcompose.compose.theme.AppTheme
 
 @Preview
 @Composable
-fun PreviewBranchScreenLayout() {
-    BranchScreenLayout(
+fun PreviewBranchScreen() {
+    BranchScreen(
         title = "branch"
     )
 }
 
 @Composable
-fun BranchScreenLayout(
+fun BranchScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     title: String = "",
     backIconOnClick: () -> Unit = {},

@@ -27,15 +27,15 @@ import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.Screen
 
 @Preview
 @Composable
-fun PreviewNavigationScreenLayout() {
-    NavigationScreenLayout(
+fun PreviewNavigationScreen() {
+    NavigationScreen(
         title = "navigation",
         screen = Screen.values().toList()
     )
 }
 
 @Composable
-fun NavigationScreenLayout(
+fun NavigationScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     title: String = "",
     navController: NavHostController = rememberNavController(),

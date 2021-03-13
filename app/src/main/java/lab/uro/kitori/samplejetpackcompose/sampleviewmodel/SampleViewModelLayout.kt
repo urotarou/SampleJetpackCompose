@@ -1,18 +1,19 @@
 package lab.uro.kitori.samplejetpackcompose.sampleviewmodel
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreenLayout
+import androidx.compose.ui.unit.sp
+import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreen
 
 @Preview
 @Composable
@@ -48,30 +49,31 @@ fun ScreenLayout(
     shuffleButtonOnClick: () -> Unit = {},
     name: String = ""
 ) {
-    BranchScreenLayout(
+    BranchScreen(
         darkTheme,
         "Sample ViewModel",
         backIconOnClick
     ) {
         val nameVisibility = name.isNotBlank()
 
-        Column(
+        Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp, 32.dp),
-            verticalArrangement = if (nameVisibility) {
-                Arrangement.SpaceBetween
-            } else {
-                Arrangement.Bottom
-            }
+                .padding(16.dp, 32.dp)
         ) {
             if (nameVisibility) {
-                Text("name is $name")
+                Text(
+                    "name is $name",
+                    modifier = Modifier.align(Alignment.Center),
+                    fontSize = 24.sp
+                )
             }
 
             Button(
                 onClick = shuffleButtonOnClick,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .align(Alignment.BottomCenter)
             ) {
                 Text("Shuffle")
             }

@@ -15,7 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import lab.uro.kitori.samplejetpackcompose.compose.ui.RootScreenLayout
+import lab.uro.kitori.samplejetpackcompose.compose.ui.RootScreen
 
 @Preview
 @Composable
@@ -37,7 +37,7 @@ fun ScreenLayout(
     sampleListButtonOnClick: () -> Unit = {},
     sampleNavigationButtonOnClick: () -> Unit = {}
 ) {
-    RootScreenLayout(darkTheme, "Main") {
+    RootScreen(darkTheme, "Main") {
         val scrollState = rememberScrollState()
 
         Column(

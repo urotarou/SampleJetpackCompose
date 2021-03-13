@@ -17,14 +17,14 @@ import lab.uro.kitori.samplejetpackcompose.compose.theme.AppTheme
 
 @Preview
 @Composable
-fun PreviewRootScreenLayout() {
-    RootScreenLayout(
+fun PreviewRootScreen() {
+    RootScreen(
         title = "root"
     )
 }
 
 @Composable
-fun RootScreenLayout(
+fun RootScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     title: String = "",
     content: @Composable () -> Unit = {}

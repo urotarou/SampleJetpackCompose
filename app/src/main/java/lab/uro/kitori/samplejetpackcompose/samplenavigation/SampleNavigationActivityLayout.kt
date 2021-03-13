@@ -6,7 +6,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import lab.uro.kitori.samplejetpackcompose.compose.ui.NavigationScreenLayout
+import lab.uro.kitori.samplejetpackcompose.compose.ui.NavigationScreen
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.CommentLayout
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.HomeLayout
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.LinkLayout
@@ -31,7 +31,7 @@ fun ScreenLayout(
     backIconOnClick: () -> Unit = {}
 ) {
     val navController = rememberNavController()
-    NavigationScreenLayout(
+    NavigationScreen(
         darkTheme,
         "Sample Navigation",
         navController,

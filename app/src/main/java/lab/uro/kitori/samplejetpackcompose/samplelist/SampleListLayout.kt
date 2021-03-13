@@ -26,7 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreenLayout
+import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreen
 
 @Preview
 @Composable
@@ -60,7 +60,7 @@ fun ScreenLayout(
     items: List<String> = listOf(),
     isLoading: Boolean = false
 ) {
-    BranchScreenLayout(
+    BranchScreen(
         darkTheme,
         "Sample List",
         backIconOnClick
