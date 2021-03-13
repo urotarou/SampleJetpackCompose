@@ -19,7 +19,7 @@ ViewModel中のLiveDataと連携して値を表示へ反映
 
 縦/横のリストを表示
 
-- Box, LazyColumn, Row
+- Box, LazyColumn, LazyRow, Row
 - CircularProgressIndicator, Button, Text, LazyRow, Card
 - ViewModel
 
