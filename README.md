@@ -1,5 +1,13 @@
 # Jetpack Compose サンプル
 
+## Main
+
+各Sampleへの導線
+
+- Column
+- Button, Text, Spacer
+- 縦Scrollあり
+
 ## Sample ViewModel
 
 ViewModel中のLiveDataと連携して値を表示へ反映
@@ -29,6 +37,8 @@ BottomNavigationを利用した画面切り替え
 
 - Column
 - NavHost, Text, Spacer, Button
+- buildAnnotatedStringによる文字列の表示変更あり
+- Buttonタップでのnavigateあり
 
 ## Sample Tab
 
@@ -44,3 +54,5 @@ BottomNavigationを利用した画面切り替え
 - MaterialTheme, Scaffold
 - TopAppBar, BottomNavigation
 - IconButton, BottomNavigationItem
+- actionsによるオプション表示あり
+- navigationIconによる画面戻りあり
