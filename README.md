@@ -27,16 +27,16 @@ ViewModel中のLiveDataと連携して値を表示へ反映
 
 縦/横のリストを表示
 
-- Box, LazyColumn, Row
-- CircularProgressIndicator, Button, Text, LazyRow, Card
+- Box, LazyColumn, LazyRow, Row
+- CircularProgressIndicator, Button, Text, Card
 - ViewModel
 
 ## Sample Navigation
 
 BottomNavigationを利用した画面切り替え
 
-- Column
-- NavHost, Text, Spacer, Button
+- NavHost, Column
+- Text, Spacer, Button
 - buildAnnotatedStringによる文字列の表示変更あり
 - Buttonタップでのnavigateあり
 
