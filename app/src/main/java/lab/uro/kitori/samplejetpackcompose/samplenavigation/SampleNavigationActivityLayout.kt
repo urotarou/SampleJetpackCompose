@@ -31,6 +31,7 @@ fun ScreenLayout(
     backIconOnClick: () -> Unit = {}
 ) {
     val navController = rememberNavController()
+
     NavigationScreen(
         darkTheme,
         "Sample Navigation",

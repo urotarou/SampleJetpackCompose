@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import lab.uro.kitori.samplejetpackcompose.sampleimage.SampleImageActivity
 import lab.uro.kitori.samplejetpackcompose.samplelist.SampleListActivity
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.SampleNavigationActivity
+import lab.uro.kitori.samplejetpackcompose.sampletab.SampleTabActivity
 import lab.uro.kitori.samplejetpackcompose.sampleviewmodel.SampleViewModelActivity
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
                 },
                 sampleNavigationButtonOnClick = {
                     startActivity(SampleNavigationActivity.createIntent(this))
+                },
+                sampleTabButtonOnClick = {
+                    startActivity(SampleTabActivity.createIntent(this))
                 }
             )
         }

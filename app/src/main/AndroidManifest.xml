@@ -24,5 +24,6 @@
         <activity android:name=".sampleimage.SampleImageActivity" />
         <activity android:name=".samplelist.SampleListActivity" />
         <activity android:name=".samplenavigation.SampleNavigationActivity" />
+        <activity android:name=".sampletab.SampleTabActivity" />
     </application>
 </manifest>
