@@ -3,6 +3,7 @@ package lab.uro.kitori.samplejetpackcompose.main
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import lab.uro.kitori.samplejetpackcompose.samplebottomsheet.SampleBottomSheetActivity
 import lab.uro.kitori.samplejetpackcompose.sampleconstraint.SampleConstraintActivity
 import lab.uro.kitori.samplejetpackcompose.sampledrawer.SampleDrawerActivity
 import lab.uro.kitori.samplejetpackcompose.sampleimage.SampleImageActivity
@@ -40,6 +41,9 @@ class MainActivity : AppCompatActivity() {
                 },
                 sampleMessageButtonOnClick = {
                     startActivity(SampleMessageActivity.createIntent(this))
+                },
+                sampleBottomSheetButtonOnClick = {
+                    startActivity(SampleBottomSheetActivity.createIntent(this))
                 }
             )
         }

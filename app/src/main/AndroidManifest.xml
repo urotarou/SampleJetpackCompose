@@ -28,5 +28,6 @@
         <activity android:name=".sampledrawer.SampleDrawerActivity" />
         <activity android:name=".sampleconstraint.SampleConstraintActivity" />
         <activity android:name=".samplemessage.SampleMessageActivity" />
+        <activity android:name=".samplebottomsheet.SampleBottomSheetActivity" />
     </application>
 </manifest>

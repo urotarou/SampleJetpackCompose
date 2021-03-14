@@ -64,11 +64,18 @@ ConstraintLayoutを利用した表示
 
 ## Sample Message
 
-ダイアログとスナックバーを表示表示
+ダイアログとスナックバーを表示
 
 - Column, Box, Row
 - Button, Text, Spacer, TextButton
 - AlertDialog, Snackbar
+
+## Sample BottomSheet
+
+ボトムシートを表示
+
+- ModalBottomSheetLayout, Box, Column
+- Text, Button, Spacer
 
 ## その他
 
