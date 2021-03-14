@@ -3,6 +3,7 @@ package lab.uro.kitori.samplejetpackcompose.main
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import lab.uro.kitori.samplejetpackcompose.sampleandroidview.SampleAndroidViewActivity
 import lab.uro.kitori.samplejetpackcompose.samplebottomsheet.SampleBottomSheetActivity
 import lab.uro.kitori.samplejetpackcompose.sampleconstraint.SampleConstraintActivity
 import lab.uro.kitori.samplejetpackcompose.sampledrawer.SampleDrawerActivity
@@ -48,6 +49,9 @@ class MainActivity : AppCompatActivity() {
                 },
                 sampleFabButtonOnClick = {
                     startActivity(SampleFabActivity.createIntent(this))
+                },
+                sampleAndroidViewButtonOnClick = {
+                    startActivity(SampleAndroidViewActivity.createIntent(this))
                 }
             )
         }

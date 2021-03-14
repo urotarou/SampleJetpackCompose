@@ -41,7 +41,8 @@ fun ScreenLayout(
     sampleConstraintButtonOnClick: () -> Unit = {},
     sampleMessageButtonOnClick: () -> Unit = {},
     sampleBottomSheetButtonOnClick: () -> Unit = {},
-    sampleFabButtonOnClick: () -> Unit = {}
+    sampleFabButtonOnClick: () -> Unit = {},
+    sampleAndroidViewButtonOnClick: () -> Unit = {}
 ) {
     RootScreen(darkTheme, "Main") {
         val scrollState = rememberScrollState()
@@ -129,6 +130,14 @@ fun ScreenLayout(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("Sample FAB")
+            }
+            Spacer(modifier = Modifier.height(32.dp))
+
+            Button(
+                onClick = sampleAndroidViewButtonOnClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample AndroidView")
             }
         }
     }

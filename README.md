@@ -85,6 +85,13 @@ ConstraintLayoutを利用した表示
 - Text
 - 独自の関数BranchWithFabScreenにてFloatingActionButton利用あり
 
+## Sample AndroidView
+
+AndroidViewを利用してWebViewを表示
+
+- Column
+- AndroidView, Spacer, Text
+
 ## その他
 
 土台づくりなどで共通利用しているものあり
