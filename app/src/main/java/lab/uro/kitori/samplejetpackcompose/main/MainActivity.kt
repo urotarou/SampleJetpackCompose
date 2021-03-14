@@ -7,6 +7,7 @@ import lab.uro.kitori.samplejetpackcompose.sampleconstraint.SampleConstraintActi
 import lab.uro.kitori.samplejetpackcompose.sampledrawer.SampleDrawerActivity
 import lab.uro.kitori.samplejetpackcompose.sampleimage.SampleImageActivity
 import lab.uro.kitori.samplejetpackcompose.samplelist.SampleListActivity
+import lab.uro.kitori.samplejetpackcompose.samplemessage.SampleMessageActivity
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.SampleNavigationActivity
 import lab.uro.kitori.samplejetpackcompose.sampletab.SampleTabActivity
 import lab.uro.kitori.samplejetpackcompose.sampleviewmodel.SampleViewModelActivity
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
                 },
                 sampleConstraintButtonOnClick = {
                     startActivity(SampleConstraintActivity.createIntent(this))
+                },
+                sampleMessageButtonOnClick = {
+                    startActivity(SampleMessageActivity.createIntent(this))
                 }
             )
         }
