@@ -62,6 +62,14 @@ ConstraintLayoutを利用した表示
 - ConstraintLayout
 - Text
 
+## Sample Message
+
+ダイアログとスナックバーを表示表示
+
+- Column, Box, Row
+- Button, Text, Spacer, TextButton
+- AlertDialog, Snackbar
+
 ## その他
 
 土台づくりなどで共通利用しているものあり
