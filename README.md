@@ -47,6 +47,14 @@ BottomNavigationを利用した画面切り替え
 - Column, TabRow, Box
 - Tab, Icon, Text
 
+## Sample Drawer
+
+ドロワーの表示とそれを利用した表示切り替え
+
+- ModalDrawer, Column
+- Text, Spacer, Button
+- ButtonタップなどでのDrawerの開閉あり
+
 ## その他
 
 土台づくりなどで共通利用しているものあり
