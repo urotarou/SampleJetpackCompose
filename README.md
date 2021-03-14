@@ -77,12 +77,20 @@ ConstraintLayoutを利用した表示
 - ModalBottomSheetLayout, Box, Column
 - Text, Button, Spacer
 
+## Sample FAB
+
+フローティングアクションボタンを表示
+
+- Box
+- Text
+- 独自の関数BranchWithFabScreenにてFloatingActionButton利用あり
+
 ## その他
 
 土台づくりなどで共通利用しているものあり
 
 - MaterialTheme, Scaffold
-- TopAppBar, BottomNavigation
-- IconButton, BottomNavigationItem
+- TopAppBar, BottomNavigation, FloatingActionButton
+- IconButton, BottomNavigationItem, Icon
 - actionsによるオプション表示あり
 - navigationIconによる画面戻りあり

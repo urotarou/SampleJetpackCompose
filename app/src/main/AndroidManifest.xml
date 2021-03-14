@@ -29,5 +29,6 @@
         <activity android:name=".sampleconstraint.SampleConstraintActivity" />
         <activity android:name=".samplemessage.SampleMessageActivity" />
         <activity android:name=".samplebottomsheet.SampleBottomSheetActivity" />
+        <activity android:name=".samplefab.SampleFabActivity" />
     </application>
 </manifest>
