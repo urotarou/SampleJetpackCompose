@@ -47,7 +47,7 @@ fun ScreenLayout(
 ) {
     BranchScreen(
         darkTheme,
-        "Sample Image",
+        "Sample Message",
         backIconOnClick
     ) {
         val showDialog = remember { mutableStateOf(false) }
