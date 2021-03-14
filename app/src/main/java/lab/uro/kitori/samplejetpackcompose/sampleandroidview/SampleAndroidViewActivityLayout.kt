@@ -31,11 +31,16 @@ fun ScreenLayout(
         "Sample AndroidView",
         backIconOnClick
     ) {
-        AndroidView(
-            factory = { WebView(it) },
-            modifier = Modifier.fillMaxSize()
-        ) {
-            it.loadUrl("https://github.com/urotarou/SampleJetpackCompose/blob/master/app/src/main/java/lab/uro/kitori/samplejetpackcompose/sampleandroidview/SampleAndroidViewActivityLayout.kt")
-        }
+        WebView("https://github.com/urotarou/SampleJetpackCompose/blob/master/app/src/main/java/lab/uro/kitori/samplejetpackcompose/sampleandroidview/SampleAndroidViewActivityLayout.kt")
+    }
+}
+
+@Composable
+fun WebView(url: String) {
+    AndroidView(
+        factory = { WebView(it) },
+        modifier = Modifier.fillMaxSize()
+    ) {
+        it.loadUrl(url)
     }
 }
