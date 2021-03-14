@@ -3,6 +3,7 @@ package lab.uro.kitori.samplejetpackcompose.main
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import lab.uro.kitori.samplejetpackcompose.sampleconstraint.SampleConstraintActivity
 import lab.uro.kitori.samplejetpackcompose.sampledrawer.SampleDrawerActivity
 import lab.uro.kitori.samplejetpackcompose.sampleimage.SampleImageActivity
 import lab.uro.kitori.samplejetpackcompose.samplelist.SampleListActivity
@@ -32,6 +33,9 @@ class MainActivity : AppCompatActivity() {
                 },
                 sampleDrawerButtonOnClick = {
                     startActivity(SampleDrawerActivity.createIntent(this))
+                },
+                sampleConstraintButtonOnClick = {
+                    startActivity(SampleConstraintActivity.createIntent(this))
                 }
             )
         }

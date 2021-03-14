@@ -26,5 +26,6 @@
         <activity android:name=".samplenavigation.SampleNavigationActivity" />
         <activity android:name=".sampletab.SampleTabActivity" />
         <activity android:name=".sampledrawer.SampleDrawerActivity" />
+        <activity android:name=".sampleconstraint.SampleConstraintActivity" />
     </application>
 </manifest>

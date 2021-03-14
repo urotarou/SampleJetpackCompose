@@ -37,7 +37,8 @@ fun ScreenLayout(
     sampleListButtonOnClick: () -> Unit = {},
     sampleNavigationButtonOnClick: () -> Unit = {},
     sampleTabButtonOnClick: () -> Unit = {},
-    sampleDrawerButtonOnClick: () -> Unit = {}
+    sampleDrawerButtonOnClick: () -> Unit = {},
+    sampleConstraintButtonOnClick: () -> Unit = {}
 ) {
     RootScreen(darkTheme, "Main") {
         val scrollState = rememberScrollState()
@@ -93,6 +94,14 @@ fun ScreenLayout(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text("Sample Drawer")
+            }
+            Spacer(modifier = Modifier.height(32.dp))
+
+            Button(
+                onClick = sampleConstraintButtonOnClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Sample Constraint")
             }
         }
     }

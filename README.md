@@ -55,6 +55,13 @@ BottomNavigationを利用した画面切り替え
 - Text, Spacer, Button
 - ButtonタップなどでのDrawerの開閉あり
 
+## Sample Drawer
+
+ConstraintLayoutを利用した表示
+
+- ConstraintLayout
+- Text
+
 ## その他
 
 土台づくりなどで共通利用しているものあり
