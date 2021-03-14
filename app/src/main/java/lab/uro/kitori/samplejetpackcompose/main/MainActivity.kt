@@ -3,6 +3,7 @@ package lab.uro.kitori.samplejetpackcompose.main
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import lab.uro.kitori.samplejetpackcompose.sampledrawer.SampleDrawerActivity
 import lab.uro.kitori.samplejetpackcompose.sampleimage.SampleImageActivity
 import lab.uro.kitori.samplejetpackcompose.samplelist.SampleListActivity
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.SampleNavigationActivity
@@ -28,6 +29,9 @@ class MainActivity : AppCompatActivity() {
                 },
                 sampleTabButtonOnClick = {
                     startActivity(SampleTabActivity.createIntent(this))
+                },
+                sampleDrawerButtonOnClick = {
+                    startActivity(SampleDrawerActivity.createIntent(this))
                 }
             )
         }
