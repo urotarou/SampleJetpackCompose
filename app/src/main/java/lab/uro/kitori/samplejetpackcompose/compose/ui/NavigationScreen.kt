@@ -17,10 +17,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavDestination.Companion.hierarchy
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.KEY_ROUTE
 import androidx.navigation.compose.currentBackStackEntryAsState
-import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
 import lab.uro.kitori.samplejetpackcompose.compose.theme.AppTheme
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.Screen
@@ -30,7 +30,7 @@ import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.Screen
 fun PreviewNavigationScreen() {
     NavigationScreen(
         title = "navigation",
-        screen = Screen.values().toList()
+        screens = Screen.values().toList()
     )
 }
 
@@ -40,7 +40,7 @@ fun NavigationScreen(
     title: String = "",
     navController: NavHostController = rememberNavController(),
     backIconOnClick: () -> Unit = {},
-    screen: List<Screen> = listOf(),
+    screens: List<Screen> = listOf(),
     content: @Composable () -> Unit = {}
 ) {
     AppTheme(darkTheme) {
@@ -58,21 +58,21 @@ fun NavigationScreen(
             bottomBar = {
                 BottomNavigation {
                     val navBackStackEntry by navController.currentBackStackEntryAsState()
-                    val currentRoute = navBackStackEntry?.arguments?.getString(KEY_ROUTE)
+                    val currentDestination = navBackStackEntry?.destination
 
-                    screen.forEach {
+                    screens.forEach { screen ->
                         BottomNavigationItem(
-                            selected = currentRoute == it.route,
+                            selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                             onClick = {
-                                navController.navigate(it.route) {
-                                    popUpTo = navController.graph.startDestination
+                                navController.navigate(screen.route) {
+                                    popUpTo(navController.graph.findStartDestination().id)
                                     launchSingleTop = true
                                 }
                             },
                             icon = {
-                                Icon(imageVector = it.icon, contentDescription = "func")
+                                Icon(imageVector = screen.icon, contentDescription = "func")
                             },
-                            label = { Text(it.label) }
+                            label = { Text(screen.label) }
                         )
                     }
                 }

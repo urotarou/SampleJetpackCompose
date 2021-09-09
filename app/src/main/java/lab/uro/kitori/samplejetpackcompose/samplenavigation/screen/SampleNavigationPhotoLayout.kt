@@ -20,8 +20,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
 
 @Preview(showSystemUi = true)
@@ -66,7 +66,7 @@ fun PhotoLayout(
         Button(
             onClick = {
                 navController.navigate(Screen.COMMENT.route) {
-                    popUpTo = navController.graph.startDestination
+                    popUpTo(navController.graph.findStartDestination().id)
                     launchSingleTop = true
                 }
             },
