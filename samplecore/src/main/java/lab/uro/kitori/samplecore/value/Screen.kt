@@ -1,4 +1,4 @@
-package lab.uro.kitori.samplejetpackcompose.samplenavigation.screen
+package lab.uro.kitori.samplecore.value
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AddPhotoAlternate

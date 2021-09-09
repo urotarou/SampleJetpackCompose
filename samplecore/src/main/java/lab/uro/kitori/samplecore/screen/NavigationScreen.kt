@@ -1,4 +1,4 @@
-package lab.uro.kitori.samplejetpackcompose.compose.ui
+package lab.uro.kitori.samplecore.screen
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -22,8 +22,8 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import lab.uro.kitori.samplejetpackcompose.compose.theme.AppTheme
-import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.Screen
+import lab.uro.kitori.samplecore.value.AppTheme
+import lab.uro.kitori.samplecore.value.Screen
 
 @Preview
 @Composable

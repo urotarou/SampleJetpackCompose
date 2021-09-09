@@ -1,4 +1,4 @@
-package lab.uro.kitori.samplejetpackcompose.compose.theme
+package lab.uro.kitori.samplecore.value
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

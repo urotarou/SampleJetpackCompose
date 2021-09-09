@@ -1,4 +1,4 @@
-package lab.uro.kitori.samplejetpackcompose.compose.ui
+package lab.uro.kitori.samplecore.screen
 
 import android.widget.Toast
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -13,7 +13,7 @@ import androidx.compose.material.icons.filled.ImageSearch
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import lab.uro.kitori.samplejetpackcompose.compose.theme.AppTheme
+import lab.uro.kitori.samplecore.value.AppTheme
 
 @Preview
 @Composable
