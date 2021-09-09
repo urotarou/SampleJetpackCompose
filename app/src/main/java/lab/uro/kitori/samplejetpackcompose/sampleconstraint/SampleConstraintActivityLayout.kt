@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreen
+import lab.uro.kitori.samplecore.screen.BranchScreen
 
 @Preview
 @Composable

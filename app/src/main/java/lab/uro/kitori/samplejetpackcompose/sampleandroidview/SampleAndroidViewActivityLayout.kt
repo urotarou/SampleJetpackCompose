@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.viewinterop.AndroidView
-import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreen
+import lab.uro.kitori.samplecore.screen.BranchScreen
 
 @Preview
 @Composable

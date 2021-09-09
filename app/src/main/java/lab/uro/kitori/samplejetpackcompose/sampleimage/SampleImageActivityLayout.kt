@@ -22,8 +22,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import lab.uro.kitori.samplecore.screen.BranchScreen
 import lab.uro.kitori.samplejetpackcompose.R
-import lab.uro.kitori.samplejetpackcompose.compose.ui.BranchScreen
 
 @Preview
 @Composable
