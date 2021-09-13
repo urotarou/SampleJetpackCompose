@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SampleJetpackCompose</string>
+
+    <string name="home">ホーム</string>
+    <string name="photo">写真</string>
+    <string name="comment">コメント</string>
+    <string name="link">リンク</string>
 </resources>

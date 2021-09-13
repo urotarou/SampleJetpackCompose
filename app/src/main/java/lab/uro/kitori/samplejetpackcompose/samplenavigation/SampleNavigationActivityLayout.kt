@@ -1,13 +1,19 @@
 package lab.uro.kitori.samplejetpackcompose.samplenavigation
 
+import android.widget.Toast
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Comment
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Link
+import androidx.compose.material.icons.filled.Photo
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import lab.uro.kitori.samplecore.screen.NavigationScreen
-import lab.uro.kitori.samplecore.value.Screen
+import lab.uro.kitori.samplecore.screen.AppScreen
+import lab.uro.kitori.samplecore.value.NavigationScreen
+import lab.uro.kitori.samplejetpackcompose.R
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.CommentLayout
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.HomeLayout
 import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.LinkLayout
@@ -30,20 +36,30 @@ fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
-    val navController = rememberNavController()
+    val context = LocalContext.current
 
-    NavigationScreen(
-        darkTheme,
-        "Sample Navigation",
-        navController,
-        backIconOnClick,
-        Screen.values().toList()
-    ) {
-        NavHost(navController = navController, startDestination = Screen.HOME.route) {
-            composable(Screen.HOME.route) { HomeLayout(navController) }
-            composable(Screen.PHOTO.route) { PhotoLayout(navController) }
-            composable(Screen.COMMENT.route) { CommentLayout(navController) }
-            composable(Screen.LINK.route) { LinkLayout(navController) }
+    AppScreen(
+        darkTheme = darkTheme,
+        title = "Sample Navigation",
+        topBackAction = backIconOnClick,
+        topOptionActions = {
+            add(Icons.Default.Search to {
+                Toast.makeText(context, "search", Toast.LENGTH_SHORT).show()
+            })
+        },
+        bottomNavigationItems = {
+            add(NavigationScreen("home", Icons.Default.Home, R.string.home) {
+                HomeLayout()
+            })
+            add(NavigationScreen("photo", Icons.Default.Photo, R.string.photo) {
+                PhotoLayout()
+            })
+            add(NavigationScreen("comment", Icons.Default.Comment, R.string.comment) {
+                CommentLayout()
+            })
+            add(NavigationScreen("link", Icons.Default.Link, R.string.link) {
+                LinkLayout()
+            })
         }
-    }
+    )
 }
