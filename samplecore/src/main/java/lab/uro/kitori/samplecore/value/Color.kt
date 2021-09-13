@@ -1,5 +1,8 @@
 package lab.uro.kitori.samplecore.value
 
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.MaterialTheme
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 // light
@@ -35,3 +38,10 @@ val ColorDarkOnSecondary = Color(0xffeeeeee)
 val ColorDarkOnBackground = Color(0xffeeeeee)
 val ColorDarkOnSurface = Color(0xffeeeeee)
 val ColorDarkOnError = Color(0xff000000)
+
+@Composable
+fun barBackgroundColor(darkTheme: Boolean = isSystemInDarkTheme()) = if (darkTheme) {
+    MaterialTheme.colors.background
+} else {
+    MaterialTheme.colors.primary
+}
