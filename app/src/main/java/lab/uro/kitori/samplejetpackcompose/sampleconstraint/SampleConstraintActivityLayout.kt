@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import lab.uro.kitori.samplecore.screen.BranchScreen
+import lab.uro.kitori.samplecore.screen.AppScreen
 
 @Preview
 @Composable
@@ -28,7 +28,7 @@ fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
-    BranchScreen(
+    AppScreen(
         darkTheme,
         "Sample Constraint",
         backIconOnClick

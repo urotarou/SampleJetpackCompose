@@ -22,7 +22,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import lab.uro.kitori.samplecore.screen.BranchScreen
+import lab.uro.kitori.samplecore.screen.AppScreen
 import lab.uro.kitori.samplejetpackcompose.R
 
 @Preview
@@ -42,7 +42,7 @@ fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
-    BranchScreen(
+    AppScreen(
         darkTheme,
         "Sample Image",
         backIconOnClick

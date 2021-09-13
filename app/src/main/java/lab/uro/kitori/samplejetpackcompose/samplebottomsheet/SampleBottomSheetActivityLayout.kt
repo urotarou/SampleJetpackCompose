@@ -28,7 +28,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import lab.uro.kitori.samplecore.screen.BranchScreen
+import lab.uro.kitori.samplecore.screen.AppScreen
 
 @ExperimentalMaterialApi
 @Preview
@@ -50,7 +50,7 @@ fun ScreenLayout(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
-    BranchScreen(
+    AppScreen(
         darkTheme,
         "Sample BottomSheet",
         backIconOnClick
