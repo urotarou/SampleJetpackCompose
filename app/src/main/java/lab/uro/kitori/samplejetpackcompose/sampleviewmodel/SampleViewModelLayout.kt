@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import lab.uro.kitori.samplecore.screen.BranchScreen
+import lab.uro.kitori.samplecore.screen.AppScreen
 
 @Preview
 @Composable
@@ -49,7 +49,7 @@ fun ScreenLayout(
     shuffleButtonOnClick: () -> Unit = {},
     name: String = ""
 ) {
-    BranchScreen(
+    AppScreen(
         darkTheme,
         "Sample ViewModel",
         backIconOnClick
