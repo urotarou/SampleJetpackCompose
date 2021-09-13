@@ -15,7 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import lab.uro.kitori.samplecore.screen.RootScreen
+import lab.uro.kitori.samplecore.screen.AppScreen
 
 @Preview
 @Composable
@@ -44,7 +44,7 @@ fun ScreenLayout(
     sampleFabButtonOnClick: () -> Unit = {},
     sampleAndroidViewButtonOnClick: () -> Unit = {}
 ) {
-    RootScreen(darkTheme, "Main") {
+    AppScreen(darkTheme, "Main") {
         val scrollState = rememberScrollState()
 
         Column(
