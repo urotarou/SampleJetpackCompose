@@ -31,7 +31,7 @@ fun ScreenLayout(
         "Sample AndroidView",
         backIconOnClick
     ) {
-        WebView("https://github.com/urotarou/SampleJetpackCompose/blob/master/app/src/main/java/lab/uro/kitori/samplejetpackcompose/sampleandroidview/SampleAndroidViewActivityLayout.kt")
+        WebView("https://github.com/urotarou/SampleJetpackCompose/blob/master/app/src/main/java/lab/uro/kitori/samplejetpackcompose/sampleandroidview/SampleAndroidViewScreen.kt")
     }
 }
 
