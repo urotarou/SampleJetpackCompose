@@ -12,17 +12,17 @@ import lab.uro.kitori.samplecore.screen.AppScreen
 @Preview
 @Composable
 fun PreviewLayoutLight() {
-    ScreenLayout(false)
+    SampleAndroidViewScreen(false)
 }
 
 @Preview
 @Composable
 fun PreviewLayoutDark() {
-    ScreenLayout(true)
+    SampleAndroidViewScreen(true)
 }
 
 @Composable
-fun ScreenLayout(
+fun SampleAndroidViewScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
