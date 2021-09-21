@@ -14,7 +14,7 @@ class SampleConstraintActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ScreenLayout {
+            SampleConstraintScreen {
                 onBackPressed()
             }
         }
