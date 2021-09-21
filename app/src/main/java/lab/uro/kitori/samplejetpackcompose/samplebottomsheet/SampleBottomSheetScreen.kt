@@ -30,21 +30,18 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import lab.uro.kitori.samplecore.screen.AppScreen
 
-@ExperimentalMaterialApi
 @Preview
 @Composable
 fun PreviewSampleBottomSheetScreenLight() {
     SampleBottomSheetScreen(false)
 }
 
-@ExperimentalMaterialApi
 @Preview
 @Composable
 fun PreviewSampleBottomSheetScreenDark() {
     SampleBottomSheetScreen(true)
 }
 
-@ExperimentalMaterialApi
 @Composable
 fun SampleBottomSheetScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -66,7 +63,7 @@ fun SampleBottomSheetScreen(
     }
 }
 
-@ExperimentalMaterialApi
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun BottomSheetA(
     scope: CoroutineScope,
@@ -122,7 +119,7 @@ fun BottomSheetA(
     }
 }
 
-@ExperimentalMaterialApi
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun BottomSheetB(
     scope: CoroutineScope,
@@ -178,7 +175,6 @@ fun BottomSheetB(
     }
 }
 
-@ExperimentalMaterialApi
 @Composable
 fun BaseLayout(currentBottomSheetIndex: MutableState<Int>) {
     Box(
