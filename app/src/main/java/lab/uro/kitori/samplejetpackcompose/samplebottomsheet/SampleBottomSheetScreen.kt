@@ -33,20 +33,20 @@ import lab.uro.kitori.samplecore.screen.AppScreen
 @ExperimentalMaterialApi
 @Preview
 @Composable
-fun PreviewLayoutLight() {
-    ScreenLayout(false)
+fun PreviewSampleBottomSheetScreenLight() {
+    SampleBottomSheetScreen(false)
 }
 
 @ExperimentalMaterialApi
 @Preview
 @Composable
-fun PreviewLayoutDark() {
-    ScreenLayout(true)
+fun PreviewSampleBottomSheetScreenDark() {
+    SampleBottomSheetScreen(true)
 }
 
 @ExperimentalMaterialApi
 @Composable
-fun ScreenLayout(
+fun SampleBottomSheetScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
