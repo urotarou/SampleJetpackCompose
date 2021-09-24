@@ -14,7 +14,7 @@ class SampleFabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ScreenLayout {
+            SampleFabScreen {
                 onBackPressed()
             }
         }

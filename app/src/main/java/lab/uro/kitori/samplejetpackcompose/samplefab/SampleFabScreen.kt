@@ -20,18 +20,18 @@ import lab.uro.kitori.samplecore.screen.AppScreen
 
 @Preview
 @Composable
-fun PreviewLayoutLight() {
-    ScreenLayout(false)
+fun PreviewSampleFabScreenLight() {
+    SampleFabScreen(false)
 }
 
 @Preview
 @Composable
-fun PreviewLayoutDark() {
-    ScreenLayout(true)
+fun PreviewSampleFabScreenDark() {
+    SampleFabScreen(true)
 }
 
 @Composable
-fun ScreenLayout(
+fun SampleFabScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
