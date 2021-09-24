@@ -22,7 +22,7 @@ class SampleListActivity : AppCompatActivity() {
             val items by viewModel.items.observeAsState(listOf())
             val isLoading by viewModel.isLoading.observeAsState(false)
 
-            ScreenLayout(
+            SampleListScreen(
                 backIconOnClick = {
                     onBackPressed()
                 },

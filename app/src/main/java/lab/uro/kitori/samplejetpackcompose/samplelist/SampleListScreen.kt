@@ -30,14 +30,14 @@ import lab.uro.kitori.samplecore.screen.AppScreen
 
 @Preview
 @Composable
-fun PreviewLayoutLight() {
-    ScreenLayout(false)
+fun PreviewSampleListScreenLight() {
+    SampleListScreen(false)
 }
 
 @Preview
 @Composable
-fun PreviewLayoutLightInProgress() {
-    ScreenLayout(
+fun PreviewSampleListScreenLightInProgress() {
+    SampleListScreen(
         false,
         isLoading = true
     )
@@ -45,15 +45,15 @@ fun PreviewLayoutLightInProgress() {
 
 @Preview
 @Composable
-fun PreviewLayoutDark() {
-    ScreenLayout(
+fun PreviewSampleListScreenDark() {
+    SampleListScreen(
         true,
         items = (0 until 50).map { "$it" }
     )
 }
 
 @Composable
-fun ScreenLayout(
+fun SampleListScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {},
     loadButtonOnClick: () -> Unit = {},
