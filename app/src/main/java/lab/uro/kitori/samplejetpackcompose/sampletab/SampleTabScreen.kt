@@ -25,8 +25,8 @@ import lab.uro.kitori.samplecore.screen.AppScreen
 
 @Preview
 @Composable
-fun PreviewLayoutLight() {
-    ScreenLayout(
+fun PreviewSampleTabScreenLight() {
+    SampleTabScreen(
         darkTheme = false,
         tab = Tab.values().toList()
     )
@@ -34,15 +34,15 @@ fun PreviewLayoutLight() {
 
 @Preview
 @Composable
-fun PreviewLayoutDark() {
-    ScreenLayout(
+fun PreviewSampleTabScreenDark() {
+    SampleTabScreen(
         darkTheme = true,
         tab = Tab.values().toList()
     )
 }
 
 @Composable
-fun ScreenLayout(
+fun SampleTabScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {},
     tab: List<Tab> = listOf()
