@@ -21,18 +21,18 @@ import lab.uro.kitori.samplejetpackcompose.samplenavigation.screen.PhotoLayout
 
 @Preview
 @Composable
-fun PreviewLayoutLight() {
-    ScreenLayout(false)
+fun PreviewSampleNavigationScreenLight() {
+    SampleNavigationScreen(false)
 }
 
 @Preview
 @Composable
-fun PreviewLayoutDark() {
-    ScreenLayout(true)
+fun PreviewSampleNavigationScreenDark() {
+    SampleNavigationScreen(true)
 }
 
 @Composable
-fun ScreenLayout(
+fun SampleNavigationScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {

@@ -14,7 +14,7 @@ class SampleNavigationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ScreenLayout {
+            SampleNavigationScreen {
                 onBackPressed()
             }
         }
