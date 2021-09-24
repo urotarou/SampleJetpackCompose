@@ -27,18 +27,18 @@ import lab.uro.kitori.samplejetpackcompose.R
 
 @Preview
 @Composable
-fun PreviewLayoutLight() {
-    ScreenLayout(false)
+fun PreviewSampleImageScreenLight() {
+    SampleImageScreen(false)
 }
 
 @Preview
 @Composable
-fun PreviewLayoutDark() {
-    ScreenLayout(true)
+fun PreviewSampleImageScreenDark() {
+    SampleImageScreen(true)
 }
 
 @Composable
-fun ScreenLayout(
+fun SampleImageScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {}
 ) {
