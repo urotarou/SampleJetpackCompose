@@ -17,8 +17,8 @@ import lab.uro.kitori.samplecore.screen.AppScreen
 
 @Preview
 @Composable
-fun PreviewLayoutLightNoName() {
-    ScreenLayout(
+fun PreviewSampleViewModelScreenLightNoName() {
+    SampleViewModelScreen(
         false,
         name = ""
     )
@@ -26,8 +26,8 @@ fun PreviewLayoutLightNoName() {
 
 @Preview
 @Composable
-fun PreviewLayoutLight() {
-    ScreenLayout(
+fun PreviewSampleViewModelScreenLight() {
+    SampleViewModelScreen(
         false,
         name = "light"
     )
@@ -35,15 +35,15 @@ fun PreviewLayoutLight() {
 
 @Preview
 @Composable
-fun PreviewLayoutDark() {
-    ScreenLayout(
+fun PreviewSampleViewModelScreenDark() {
+    SampleViewModelScreen(
         true,
         name = "dark"
     )
 }
 
 @Composable
-fun ScreenLayout(
+fun SampleViewModelScreen(
     darkTheme: Boolean = isSystemInDarkTheme(),
     backIconOnClick: () -> Unit = {},
     shuffleButtonOnClick: () -> Unit = {},

@@ -21,7 +21,7 @@ class SampleViewModelActivity : AppCompatActivity() {
         setContent {
             val name by viewModel.name.observeAsState("")
 
-            ScreenLayout(
+            SampleViewModelScreen(
                 backIconOnClick = {
                     onBackPressed()
                 },
